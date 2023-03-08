@@ -14,6 +14,11 @@ import HelloWorld from './components/HelloWorld.vue'
   <HelloWorld msg="Vite + Vue" />
 </template>
 
+<script>
+console.log('hello');
+console.log(`secret ${process.env.CANDY_SECURE}`);
+</script>
+
 <style scoped>
 .logo {
   height: 6em;
