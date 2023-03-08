@@ -23,6 +23,9 @@ jobs:
       - name: Build project
         run: npm run build
         env: 
+          VITE_USER_ID: ${{ secrets.ZOTERO_USER_ID}}
+          VITE_AUTH_KEY: ${{ secrets.ZOTERO_AUTH_KEY}}
+          VITE_COLLECTION_ID: ${{ secrets.ZOTERO_COLLECTION_ID}}
           VITE_OPENWEATHER_BASE: ${{ secrets.OPENWEATHER_BASE }}
           VITE_OPENWEATHER_KEY: ${{ secrets.OPENWEATHER_KEY }}
 
