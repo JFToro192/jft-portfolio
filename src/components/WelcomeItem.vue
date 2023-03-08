@@ -1,5 +1,17 @@
+<script setup>
+const printEvent = (event) => {
+  let e = event.target
+  console.log(e);
+  if (e.classList.contains("active")) {
+    e.classList.remove('active');
+  } else {
+    e.classList.add('active');
+  }
+}
+</script>
+
 <template>
-  <div class="item">
+  <div class="item" @click="$event=>printEvent($event)">
     <i>
       <slot name="icon"></slot>
     </i>
@@ -13,6 +25,7 @@
 </template>
 
 <style scoped>
+
 .item {
   margin-top: 2rem;
   display: flex;
@@ -29,6 +42,7 @@ i {
   place-content: center;
   width: 32px;
   height: 32px;
+  cursor: pointer;
 
   color: var(--color-text);
 }

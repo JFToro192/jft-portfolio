@@ -34,6 +34,7 @@ const getPublication = () => {
 } 
 
 data.publication = getPublication()
+
 </script>
 
 <script setup>
@@ -50,11 +51,11 @@ import SupportIcon from './icons/IconSupport.vue'
 <template>
   <WelcomeItem>
     <template #icon>
-      <EcosystemIcon />
+      <div class="icon"><EcosystemIcon /></div>
     </template>
     <template #heading>Experience</template>
 
-    <ul class="active">
+    <ul class="list-items">
       <li>Research Fellow @ Politecnico di Milano [2021 - 2022]: SIMILE Project</li>
       <li>Research Fellow @ Politecnico di Milano [2019 - 2021]: GIOCOnDA Project</li>
       <li>Internship @ Politecnico di Milano [Feb 2019 - Aug 2019]: GIOCOnDA Project</li>
@@ -63,11 +64,11 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <EcosystemIcon />
+      <div class="icon"><EcosystemIcon /></div>
     </template>
     <template #heading>Projects Collaboration</template>
 
-    <ul>
+    <ul class="list-items">
       <li>CIDMA</li>
       <li>GIS4Schools</li>
     </ul>
@@ -77,10 +78,10 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <EcosystemIcon />
+      <div class="icon"><EcosystemIcon /></div>
     </template>
     <template #heading>Teaching Activities @ Politecnico di Milano</template>
-    <ul>
+    <ul class="list-items">
       <li>Teaching Assistant Fundamentals of GIS @ M.Sc. Civil Engineering for Risk Mitigation [Feb 2020 - Feb 2022]</li>
       <li>Teaching Assistant Geographic Information Systems @ M.Sc. Geoinformatics [Oct 2020 - Feb 2022]</li>
     </ul>
@@ -90,10 +91,10 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <ToolingIcon />
+      <div class="icon"><ToolingIcon /></div>
     </template>
     <template #heading>Education</template>
-    <ul>
+    <ul class="list-items">
       <li>PhD Candidate in the Program of Infrastructure and Environmental Engineering @ Politecnico di Milano, Italy</li>
       <li>M.Sc. Civil Engineering for Risk Mitigation @ Politecnico di Milano, Italy</li>
       <li>B.Sc. Economics @ Universidad de los Andes, Colombia</li>
@@ -106,11 +107,11 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <ToolingIcon />
+        <div class="icon"><ToolingIcon /></div>
     </template>
     <template #heading>Digital Skills</template>
 
-    <ul>
+    <ul class="list-items">
       <li>OS: Linux, Windows</li>
       <li>Desktop/WebGIS GIS: ArcGIS, QGIS, ESA Sentinel Application Platform (SNAP), ENVI, Google Earth Engine</li>
       <li>Programming Languages: Python, JavaScript, R, C++ (Basics), Java (Basics)</li>
@@ -128,11 +129,11 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <CommunityIcon />
+      <div class="icon"><CommunityIcon /></div>
     </template>
     <template #heading>Honours and Awards</template>
 
-    <ul>
+    <ul class="list-items">
       <li>ISPRS Best Young Author Award - Commision V @ XXIV ISPRS Congress 2022</li>
       <li>Merit Based "Gold Scolarship" - M.Sc. Civil Engineering for Risk Mitigation @ Politecnico di Milano</li>
     </ul>
@@ -140,12 +141,12 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <DocumentationIcon />
+      <div class="icon"><DocumentationIcon /></div>
     </template>
     <template #heading>Publications</template>
 
-    <ul>
-      <li v-for="publication in data.publication">{{ publication.title }}. Publication date: {{ publication.date }}. <i>{{ publication.proceedingsTitle }}</i>. {{ publication.doi }}. <a v-bind:href='publication.url'>[pdf]</a>.</li>
+    <ul class="list-items">
+      <li v-for="publication in data.publication">{{ publication.title }}. Publication date: {{ publication.date }}. <span class="proceeding-title">{{ publication.proceedingsTitle }}</span>. {{ publication.doi }}. <a v-bind:href='publication.url'>[pdf]</a>.</li>
     </ul>
 
   </WelcomeItem>
@@ -153,12 +154,43 @@ import SupportIcon from './icons/IconSupport.vue'
 </template>
 
 <style>
-/* ul{
-  display:none;
+
+.icon{
+  padding-top: 5px;
+  margin: 0;
 }
 
-ul.active{
+.icon.active{
+  color:purple;
+}
+
+.item ul{
+  display:none;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+}
+
+
+.item.active ul{
+  opacity: 1;
   display:block;
-} */
+}
+
+.item.active h3{
+  color: purple;
+}
+
+.item:hover ul{
+  opacity: 1;
+  display:block;
+}
+
+.item.active i{
+  color:purple;
+}
+
+span.proceeding-title{
+  font-style: italic;
+}
 </style>
 

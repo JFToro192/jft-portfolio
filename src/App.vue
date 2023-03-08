@@ -55,8 +55,6 @@ export default {
 
 
 <template>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  
   <header>
     <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
     <div class="wrapper">
@@ -64,12 +62,12 @@ export default {
         <h2>Juan Fernando Toro Herrera</h2>
         <h3><i>Ph.D. Candidate in Environmental and Infrastructure Engineering @ Politecnico di Milano</i></h3>
         <h3><i>M.Sc. Civil Engineering for Risk Mitigation @ Politecnico di Milano</i></h3>
-        <span title="Email"><a href="juanfer_toro192@hotmail.com"><fa :icon="['fas','envelope']" /></a></span>
+        <span title="Email"><a href="mailto:juanfer_toro192@hotmail.com"><fa :icon="['fas','envelope']" /></a></span>
         <span title="GitHub"><a href="https://github.com/JFToro192"><fa :icon="['fab','github-alt']" /></a></span>
         <span title="LinkedIn"><a href="https://linkedin.com/in/jftoro"><fa :icon="['fab','linkedin']" /></a></span>
       </div>
-      <br>
       <HelloWorld msg="Welcome!" />
+      <br>
       <div class='map' ref="map-root" style="width: 100%; height: 200px"></div>
       <div class="enter-city">
         <input type="text" placeholder="Enter a city" v-model="data.city">
@@ -91,6 +89,16 @@ export default {
     <TheWelcome />
   </main>
 
+  <footer>
+    <hr>
+    <div>
+      <span title="GitHub Actions"><img src="./assets/GitHub_actions.png" alt="GH_actions" style="height:20px;"></span>
+      <span title="VueJS"><img src="./assets/vue.svg" alt="VueJS" style="height:20px;"></span>
+      <span title="Zotero API"><img src="./assets/Zotero_logo.svg" alt="Zotero" style="height:20px;"></span>
+      <span title="OpenWeather API"><img src="./assets/openweather.svg" alt="OpenWeather" style="height:20px;"></span>
+      <span title="MongoDB Atlas"><img src="./assets/mongodb.svg" alt="MongoDB" style="height:20px;"></span>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
@@ -135,5 +143,16 @@ span{
 
 a:hover{
   color:blueviolet;
+}
+
+footer{
+  padding:5px;
+  border-radius: 4px;;
+  background-color: white;
+  opacity:0.5;
+}
+
+.contact-me{
+  padding-bottom: 20px;
 }
 </style>
