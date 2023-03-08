@@ -23,7 +23,8 @@ jobs:
       - name: Build project
         run: npm run build
         env: 
-          VITE_CANDY_SECURE: ${{ secrets.VITE_CANDY_SECURE }}
+          VITE_OPENWEATHER_BASE: ${{ secrets.OPENWEATHER_BASE }}
+          VITE_OPENWEATHER_KEY: ${{ secrets.OPENWEATHER_KEY }}
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
@@ -50,14 +51,14 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
 
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Test
-        run: |
-          if [ "$CANDY_SECURE" == "candy" ]
-          then
-            echo "Got secret"
-          fi
-        env: 
-          CANDY_SECURE: ${{ secrets.VITE_CANDY_SECURE }}
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Test
+  #       run: |
+  #         if [ "$CANDY_SECURE" == "candy" ]
+  #         then
+  #           echo "Got secret"
+  #         fi
+  #       env: 
+  #         CANDY_SECURE: ${{ secrets.VITE_CANDY_SECURE }}

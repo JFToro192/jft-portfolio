@@ -1,8 +1,23 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
-const USER_ID = import.meta.env.VITE_CANDY_SECURE
-console.log('hello');
-console.log(`secret ${USER_ID}`);
+import axios from 'axios'
+import { reactive } from 'vue'
+
+const OPENWEATHER_BASE = import.meta.env.VITE_OPENWEATHER_BASE;
+const OPENWEATHER_KEY = import.meta.env.VITE_OPENWEATHER_KEY;
+
+let data = reactive({
+  city: '',
+  weather: {main:{temp:''},weather:[{main:'',description:''}]},
+})
+
+const getWeather = () => {
+  axios(`${OPENWEATHER_BASE}?units=metric&q=${data.city}&appid=${OPENWEATHER_KEY}`).then(response=>{
+    data.weather = response.data
+    console.log(document.getElementsByClassName('map'));
+  })
+}
+
 </script>
 
 <template>
@@ -14,6 +29,19 @@ console.log(`secret ${USER_ID}`);
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  <div class="enter-city">
+        <input type="text" placeholder="Enter a city" v-model="data.city">
+        <button
+          @click="getWeather"
+        >
+        Submit
+        </button>
+      </div>
+      <div class="weather">
+        <h1>{{ data.weather.main.temp }}&deg;</h1>
+        <h2>{{ data.weather.weather[0].main }}</h2>
+        <h3>{{ data.weather.weather[0].description }}</h3>
+      </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
