@@ -1,5 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+const USER_ID = import.meta.env.VITE_CANDY_SECURE
+console.log('hello');
+console.log(`secret ${USER_ID}`);
 </script>
 
 <template>
@@ -13,11 +16,6 @@ import HelloWorld from './components/HelloWorld.vue'
   </div>
   <HelloWorld msg="Vite + Vue" />
 </template>
-
-<script>
-console.log('hello');
-console.log(`secret ${process.env.CANDY_SECURE}`);
-</script>
 
 <style scoped>
 .logo {

@@ -23,7 +23,7 @@ jobs:
       - name: Build project
         run: npm run build
         env: 
-          CANDY_SECURE: ${{ secrets.VITE_CANDY_SECURE }}
+          VITE_CANDY_SECURE: ${{ secrets.VITE_CANDY_SECURE }}
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
