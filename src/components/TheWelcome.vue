@@ -50,7 +50,7 @@ import SupportIcon from './icons/IconSupport.vue'
 <template>
   <WelcomeItem>
     <template #icon>
-      <DocumentationIcon />
+      <EcosystemIcon />
     </template>
     <template #heading>Experience</template>
 
@@ -59,6 +59,33 @@ import SupportIcon from './icons/IconSupport.vue'
       <li>Research Fellow @ Politecnico di Milano [2019 - 2021]: GIOCOnDA Project</li>
       <li>Internship @ Politecnico di Milano [Feb 2019 - Aug 2019]: GIOCOnDA Project</li>
     </ul>
+  </WelcomeItem>
+
+  <WelcomeItem>
+    <template #icon>
+      <EcosystemIcon />
+    </template>
+    <template #heading>Projects Collaboration</template>
+
+    <ul>
+      <li>CIDMA</li>
+      <li>GIS4Schools</li>
+    </ul>
+    <br />
+
+  </WelcomeItem>
+
+  <WelcomeItem>
+    <template #icon>
+      <EcosystemIcon />
+    </template>
+    <template #heading>Teaching Activities @ Politecnico di Milano</template>
+    <ul>
+      <li>Teaching Assistant Fundamentals of GIS @ M.Sc. Civil Engineering for Risk Mitigation [Feb 2020 - Feb 2022]</li>
+      <li>Teaching Assistant Geographic Information Systems @ M.Sc. Geoinformatics [Oct 2020 - Feb 2022]</li>
+    </ul>
+    <br />
+
   </WelcomeItem>
 
   <WelcomeItem>
@@ -80,20 +107,6 @@ import SupportIcon from './icons/IconSupport.vue'
   <WelcomeItem>
     <template #icon>
       <ToolingIcon />
-    </template>
-    <template #heading>Projects Collaboration</template>
-
-    <ul>
-      <li>CIDMA</li>
-      <li>GIS4Schools</li>
-    </ul>
-    <br />
-
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <EcosystemIcon />
     </template>
     <template #heading>Digital Skills</template>
 
@@ -127,7 +140,7 @@ import SupportIcon from './icons/IconSupport.vue'
 
   <WelcomeItem>
     <template #icon>
-      <SupportIcon />
+      <DocumentationIcon />
     </template>
     <template #heading>Publications</template>
 

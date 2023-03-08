@@ -43,12 +43,12 @@ desktop and web geospatial technologies.
 
 ## Educational Background
 
-&rarr; <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Logo_Politecnico_Milano.png" height=15> Ph.D. Infrastructure and Environmental Engineering (2019-Current) - Politecnico di Milano, Milan, Italy. Topic: *Collaborative data-sharing platform, webGIS and semiautomated production of Water Quality Parameters maps for Inland Waters Monitoring*
+&rarr; Ph.D. Infrastructure and Environmental Engineering (2019-Current) - Politecnico di Milano, Milan, Italy. Topic: *Collaborative data-sharing platform, webGIS and semiautomated production of Water Quality Parameters maps for Inland Waters Monitoring*
 
-&rarr; <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Logo_Politecnico_Milano.png" height=15> M.Sc. Civil Engineering for Risk Mitigation (2016-2018) - Politecnico di Milano, Milan, Italy. Thesis: *GPS time series analysis for strain determination applied to Amatrice area*
+&rarr; M.Sc. Civil Engineering for Risk Mitigation (2016-2018) - Politecnico di Milano, Milan, Italy. Thesis: *GPS time series analysis for strain determination applied to Amatrice area*
 
-&rarr; <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/800px-University_of_Los_Andes_logo.svg.png" height=15> B.Sc. Economics (2012-2016) - Universidad de los Andes, Bogota, Colombia. Thesis: *Análisis empírico del contagio de la informalidad - modelo de dependencia espacial para el caso Cali, Colombia* 
+&rarr; B.Sc. Economics (2012-2016) - Universidad de los Andes, Bogota, Colombia. Thesis: *Análisis empírico del contagio de la informalidad - modelo de dependencia espacial para el caso Cali, Colombia* 
 
-&rarr; <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/University_of_Los_Andes_logo.svg/800px-University_of_Los_Andes_logo.svg.png" height=15> B.Sc. Civil and Environmental Engineering (2010-2014) - Universidad de los Andes, Bogota, Colombia. Thesis: *Análisis sistémico para la modelación de inundaciones - caso : Río Sutamarchán*
+&rarr; B.Sc. Civil and Environmental Engineering (2010-2014) - Universidad de los Andes, Bogota, Colombia. Thesis: *Análisis sistémico para la modelación de inundaciones - caso : Río Sutamarchán*
 
 ---

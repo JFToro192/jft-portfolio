@@ -55,9 +55,20 @@ export default {
 
 
 <template>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" /> -->
     <div class="wrapper">
+      <div class="contact-me">
+        <h2>Juan Fernando Toro Herrera</h2>
+        <h3><i>Ph.D. Candidate in Environmental and Infrastructure Engineering @ Politecnico di Milano</i></h3>
+        <h3><i>M.Sc. Civil Engineering for Risk Mitigation @ Politecnico di Milano</i></h3>
+        <span title="Email"><a href="juanfer_toro192@hotmail.com"><fa :icon="['fas','envelope']" /></a></span>
+        <span title="GitHub"><a href="https://github.com/JFToro192"><fa :icon="['fab','github-alt']" /></a></span>
+        <span title="LinkedIn"><a href="https://linkedin.com/in/jftoro"><fa :icon="['fab','linkedin']" /></a></span>
+      </div>
+      <br>
       <HelloWorld msg="Welcome!" />
       <div class='map' ref="map-root" style="width: 100%; height: 200px"></div>
       <div class="enter-city">
@@ -79,9 +90,6 @@ export default {
   <main>
     <TheWelcome />
   </main>
-
-  
-
 
 </template>
 
@@ -117,5 +125,15 @@ header {
 
 .enter-city input{
   font-size: 15px;
+}
+
+span{
+  padding-right: 4px;
+  height: 10px;
+  font-size: 20px;
+}
+
+a:hover{
+  color:blueviolet;
 }
 </style>
