@@ -1,7 +1,6 @@
 <script setup>
 const printEvent = (event) => {
-  let e = event.target
-  console.log(e);
+  let e = event.target.parentElement.parentElement
   if (e.classList.contains("active")) {
     e.classList.remove('active');
   } else {
@@ -10,16 +9,43 @@ const printEvent = (event) => {
 }
 </script>
 
+<script>
+export default {
+  data() {
+    return {
+      isActive: false,
+    };
+  },
+  methods: {
+    toggle() {
+      this.isActive = !this.isActive;
+    },
+
+  }
+  
+};
+
+
+</script>
+
 <template>
-  <div class="item" @click="$event=>printEvent($event)">
+  <div class="item">
     <i>
       <slot name="icon"></slot>
     </i>
     <div class="details">
       <h3>
+        <button class="ui button toggle" 
+          :class="[!isActive ? '':'active']" 
+          @click="toggle();printEvent($event)">
+          {{isActive ? '-' : '+'}}
+        </button>
         <slot name="heading"></slot>
       </h3>
-      <slot></slot>
+      <div class="list">
+        <slot name="list"></slot>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -97,4 +123,43 @@ h3 {
     display: none;
   }
 }
+
+button{
+  height: 30px;
+  width: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+  background: transparent;
+  color: #FFF;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  border-color: transparent;
+}
+
+button:hover{
+  background: rgb(0, 150, 35);
+}
+
+button.active{
+  background: rgb(0, 150, 35);
+}
+
+.details>.list{
+  transition: opacity 1.5s ease-in-out;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+}
+
+.details.active>.list{
+  visibility: visible;
+  height: auto;
+  opacity:1;
+}
+
+.details.active>h3{
+  color: rgb(0, 150, 35)
+}
+
 </style>

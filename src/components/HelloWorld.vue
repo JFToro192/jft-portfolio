@@ -13,9 +13,12 @@ defineProps({
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h2>About me</h2>
-    <p>
-      Over the past 3+ years, I had the chance to become a research fellow, teaching assistant and pursue my PhD in Environmental and Infrastructure Engineering at Politecnico di Milano. The last years have offered me wonderful opportunities, such as collaborating on different cross-border research projects between Italy and Switzerland, and learning several skills for managing, processing and sharing geospatial data. I am enthusiastic about being able to communicate the outputs of my research and studies by leveraging desktop and web geospatial technologies.
-    </p>
+    <div class="about-me">
+      <p>
+        Over the past 3+ years, I had the chance to become a research fellow, teaching assistant and pursue my PhD in Environmental and Infrastructure Engineering at Politecnico di Milano. The last years have offered me wonderful opportunities, such as collaborating on different cross-border research projects between Italy and Switzerland, and learning several skills for managing, processing and sharing geospatial data. I am enthusiastic about being able to communicate the outputs of my research and studies by leveraging desktop and web geospatial technologies.
+      </p>      
+    </div>
+
   </div>
 </template>
 
@@ -33,6 +36,11 @@ h3 {
 .greetings h1,
 .greetings h3 {
   text-align: center;
+}
+
+.about-me{
+  padding: 10px 0;
+  text-align: justify;
 }
 
 @media (min-width: 1024px) {

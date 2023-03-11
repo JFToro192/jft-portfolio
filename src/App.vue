@@ -4,51 +4,72 @@ import TheWelcome from './components/TheWelcome.vue'
 import axios from 'axios'
 import { reactive } from 'vue'
 
-const OPENWEATHER_BASE = import.meta.env.VITE_OPENWEATHER_BASE;
-const OPENWEATHER_KEY = import.meta.env.VITE_OPENWEATHER_KEY;
-
-let data = reactive({
-  city: '',
-  weather: {main:{temp:''},weather:[{main:'',description:''}]},
-})
-
-const getWeather = () => {
-
-  axios(`${OPENWEATHER_BASE}?units=metric&q=${data.city}&appid=${OPENWEATHER_KEY}`).then(response=>{
-    data.weather = response.data
-    console.log(document.getElementsByClassName('map'));
-  })
-}
-</script>
-
-<script>
-
 import View from 'ol/View'
 import Map from 'ol/Map'
 import TileLayer from 'ol/layer/Tile'
 import OSM from 'ol/source/OSM'
+import { transform } from 'ol/proj.js';
 
 import 'ol/ol.css'
+</script>
+
+<script>
 
 export default {
   name: 'MapContainer',
   components: {},
-  props: {},
-  mounted() {
-    new Map({
-      target: this.$refs['map-root'],
-      layers: [
-        new TileLayer({
-          source: new OSM()
-        }),
-      ],
+  props: {
+    map: null,
+  },
+  data () {
+    return {
+      map : {},
+      data : reactive({
+        city: '',
+        weather: {main:{temp:''},weather:[{main:'',description:''}]},
+        icon: '',
+        location: {},
+      })
+    }
+  },
+  methods: {
+    getWeather: function () {
+      const OPENWEATHER_BASE = import.meta.env.VITE_OPENWEATHER_BASE;
+      const OPENWEATHER_KEY = import.meta.env.VITE_OPENWEATHER_KEY;
 
-      view: new View({
-        zoom: 8,
-        center: [1028230.904492,5696698.844038],
-        constrainResolution: true
-      }),
-    })
+      axios(`${OPENWEATHER_BASE}?units=metric&q=${this.data.city}&appid=${OPENWEATHER_KEY}`).then(response=>{
+        this.data.weather = response.data
+        this.data.icon = `https://openweathermap.org/img/wn/${ this.data.weather.weather[0].icon }@2x.png`;
+        this.data.location = this.data.weather.coord;
+        this.map.setView(new View({
+            center: transform([this.data.location.lon, this.data.location.lat],"EPSG:4326","EPSG:3857"),
+            zoom: 8
+        }));
+      })
+    },
+    getmap: function () {
+      // console.log(this.map.getView());
+    },
+    createMap: function () { 
+      let map = new Map({
+        target: this.$refs['map-root'],
+        layers: [
+          new TileLayer({
+            source: new OSM()
+          }),
+        ],
+
+        view: new View({
+          zoom: 8,
+          center: [1028230.904492,5696698.844038],
+          constrainResolution: true
+        }),
+      })
+      return map
+    }
+  },
+  mounted() {
+    this.map = this.createMap()
   },
 }
 </script>
@@ -68,20 +89,25 @@ export default {
       </div>
       <HelloWorld msg="Welcome!" />
       <br>
-      <div class='map' ref="map-root" style="width: 100%; height: 200px"></div>
-      <div class="enter-city">
-        <input type="text" placeholder="Enter a city" v-model="data.city">
-        <button
-          @click="getWeather"
-        >
-        Submit
-        </button>
+      <div class="projects">
+        <div class='map' ref="map-root" ></div>
+        <div class="weather">
+          <div class="enter-city">
+          <input type="text" placeholder="Enter a city" v-model="data.city">
+          <button
+          @click="getWeather();getmap()"
+          >
+          Submit
+          </button>
+        </div>  
+          <p>City: {{ data.city }}</p>
+          <p>Temperature: {{ data.weather.main.temp }}&deg;</p>
+          <p>Weather: {{ data.weather.weather[0].main }}</p>
+          <p>Description: {{ data.weather.weather[0].description }}</p>
+          <img v-bind:src=data.icon alt="">
+        </div>        
       </div>
-      <div class="weather">
-        <h1>{{ data.weather.main.temp }}&deg;</h1>
-        <h2>{{ data.weather.weather[0].main }}</h2>
-        <h3>{{ data.weather.weather[0].description }}</h3>
-      </div>
+
     </div>
   </header>
 
@@ -147,12 +173,26 @@ a:hover{
 
 footer{
   padding:5px;
-  border-radius: 4px;;
+  border-radius: 4px;
   background-color: white;
   opacity:0.5;
 }
 
 .contact-me{
   padding-bottom: 20px;
+}
+
+.projects{
+  width:100%;
+  display: flex;
+}
+
+.map{
+  width: 100%;
+  height:250px;
+}
+
+.weather {
+  margin: 0 10px;
 }
 </style>
