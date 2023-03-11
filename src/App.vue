@@ -129,7 +129,6 @@ export default {
 
 <style scoped>
 @import "ol/ol.css";
-
 header {
   line-height: 1.5;
 }

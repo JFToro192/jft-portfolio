@@ -44,6 +44,7 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+import popUp from './popUp.vue'
 </script>
 
 
@@ -55,10 +56,34 @@ import SupportIcon from './icons/IconSupport.vue'
     </template>
     <template #heading>Experience</template>
     <template #list>
-      <ul class="list-items">
-        <li>Research Fellow @ Politecnico di Milano [2021 - 2022]: SIMILE Project</li>
-        <li>Research Fellow @ Politecnico di Milano [2019 - 2021]: GIOCOnDA Project</li>
-        <li>Internship @ Politecnico di Milano [Feb 2019 - Aug 2019]: GIOCOnDA Project</li>
+      <ul class="list-items" style="list-style-type:none;">
+        <li>
+          <div class="list-item">
+            <div class="item-logo"><a href="https://www.progetti.interreg-italiasvizzera.eu/it/b/78/sistemainformativoperilmonitoraggiointegratodeilaghiinsubriciedeiloroe" class="link"><img class="project-logo" src="../assets/img/simile.png" alt="SIMILE"></a></div>
+            <div class="item-title">
+              Research Fellow @ Politecnico di Milano [2021 - 2022]: SIMILE Project
+            </div>
+            <popUp></popUp>
+          </div>
+        </li>
+        <li>
+          <div class="list-item">
+            <div class="item-logo"><a href="https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata" class="link"><img class="project-logo" src="../assets/img/gioconda.png" alt="GIOCOnDA"></a></div>
+            <div class="item-title">
+              Research Fellow @ Politecnico di Milano [2019 - 2021]: GIOCOnDA Project
+            </div>
+            <popUp></popUp>
+          </div>
+        </li>
+        <li>
+          <div class="list-item">
+            <div class="item-logo"><a href="https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata" class="link"><img class="project-logo" src="../assets/img/gioconda.png" alt="GIOCOnDA"></a></div>
+            <div class="item-title">
+              Internship @ Politecnico di Milano [Feb 2019 - Aug 2019]: GIOCOnDA Project
+            </div>
+            <popUp></popUp>
+          </div>
+        </li>
       </ul>
     </template>
 
@@ -70,9 +95,28 @@ import SupportIcon from './icons/IconSupport.vue'
     </template>
     <template #heading>Projects Collaboration</template>
     <template #list>    
-      <ul class="list-items">
-        <li>CIDMA</li>
-        <li>GIS4Schools</li>
+      <ul class="list-items" style="list-style-type:none;">
+        <li>
+          <div class="list-item">
+            <div class="item-logo"><a href="http://www.cidma.eu/" class="link"><img class="project-logo" src="../assets/img/cidma.png" alt="CIDMA"></a></div>
+            <div class="item-title">
+              CIDMA - Climate Change Induced Disaster Management in Africa
+            </div>
+            <popUp></popUp>
+          </div>
+
+        </li>
+        <li>
+          <div class="list-item">
+            <div class="item-logo"><a href="https://gis4schools.eu/#/home" class="link"><img class="project-logo" src="../assets/img/G4S.svg" alt="GIS4SCHOOLS"></a></div>
+            <div class="item-title">
+              GIS4Schools - GIS4SCHOOLS - Improving STEAM Education in Secondary Schools through the development and co-creation of new methodologies for teaching to and exploitation by pupils of GIS products related to climate impact on the environment
+            </div>
+            <popUp
+              :title="Activities"
+            ></popUp>
+          </div>
+        </li>
       </ul>
     </template>
 
@@ -180,5 +224,25 @@ span.proceeding-title{
   font-style: italic;
 }
 
+.project-logo{
+  height: 50px;
+}
+
+.list-item{
+  display:flex;
+}
+
+.item-title{
+  padding: 5px;
+  width: 100%;
+  text-align: justify;
+}
+
+.item-logo {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>
 

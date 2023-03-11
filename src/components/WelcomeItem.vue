@@ -131,22 +131,24 @@ button{
   font-weight: bold;
   margin-right: 10px;
   background: transparent;
-  color: #FFF;
+  color: rgb(0, 150, 35);
   border-radius: 50%;
-  transition: 0.5s ease-in-out;
-  border-color: transparent;
+  /* transition: 0.5s ease-in; */
+  border-color: rgb(0, 150, 35);
 }
 
 button:hover{
+  cursor:pointer;
   background: rgb(0, 150, 35);
+  color: #FFF;
 }
 
 button.active{
   background: rgb(0, 150, 35);
+  color: #FFF;
 }
 
 .details>.list{
-  transition: opacity 1.5s ease-in-out;
   visibility: hidden;
   height: 0;
   opacity: 0;
