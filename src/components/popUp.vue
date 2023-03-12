@@ -5,12 +5,12 @@ export default{
         title: {
             type: String,
             required: true,
-            default: "Title"
+            default: "Activities"
         },
         info: {
-            type: String,
+            type: Object,
             required: true,
-            default: "Information"
+            default: null
         }
     },
     data(){
@@ -32,8 +32,12 @@ export default{
     </transition>
     <transition name="slide" appear>
         <div class="modal" v-if="showModal">
-            <h3>{{ title }}</h3>
-            <p>{{ info }}</p>
+            <h3><a :href="info.activities_url">{{ title }} in {{ info.project }}</a></h3>
+            <ul>
+                <li v-for="activity in info.activities">
+                    {{ activity }}
+                </li>
+            </ul>
             <button class="modal-button" @click="showModal = false">Close</button>
         </div>
     </transition>

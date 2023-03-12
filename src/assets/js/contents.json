@@ -7,7 +7,9 @@
             "company": "Politecnico di Milano",
             "project": "SIMILE project",
             "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/sistemainformativoperilmonitoraggiointegratodeilaghiinsubriciedeiloroe",
-            "project_logo": "../assets/img/simile.png"
+            "project_logo": "/jft-portfolio/src/assets/img/simile.png",
+            "activities_url":"",
+            "activities":[]
         },
         {
             "start_date": "Ago 2019",
@@ -16,7 +18,9 @@
             "company": "Politecnico di Milano",
             "project": "GIOCOnDA project",
             "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata",
-            "project_logo": "../assets/img/gioconda.png"
+            "project_logo": "/jft-portfolio/src/assets/img/gioconda.png",
+            "activities_url":"",
+            "activities":[]
         },
         {
             "start_date": "Ago 2019",
@@ -25,32 +29,36 @@
             "company": "Politecnico di Milano",
             "project": "GIOCOnDA project",
             "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata",
-            "project_logo": "../assets/img/gioconda.png"
+            "project_logo": "/jft-portfolio/src/assets/img/gioconda.png",
+            "activities_url":"",
+            "activities":[]
         }
     ]
     ,
     "projects":[
         {
             "project": "CIDMA",
-            "full-name": "Climate Change Induced Disaster Management in Africa",
+            "full_name": "Climate Change Induced Disaster Management in Africa",
             "activities": [
                 "Introductory material to Google Earth Engine (GEE)",
                 "Introductory material to the FAS and GloFAS (”European Flood Awareness System” and ”Global Flood Awareness System”, respectively)"
             ],
-            "project_logo": "../assets/img/cidma.png",
+            "project_logo": "/jft-portfolio/src/assets/img/cidma.png",
             "tools": ["GEE","QGIS"],
-            "project_url":"#"
+            "project_url":"https://gis4schools.eu/#/home",
+            "activities_url":"#"
         },
         {
             "project": "GIS4Schools",
-            "full-name": "Climate Change Induced Disaster Management in Africa",
+            "full_name": "Improving STEAM Education in Secondary Schools through the development and co-creation of new methodologies for teaching to and exploitation by pupils of GIS products related to climate impact on the environment",
             "activities": [
                 "Study case material using copernicus EMS and crisis maps production - Flood and Fire mapping",
                 "Sphinx-based documentation for the corresponding material"
             ],
-            "project_logo": "../assets/img/cidma.png",
+            "project_logo": "/jft-portfolio/src/assets/img/G4S.svg",
             "tools": ["QGIS", "Python"],
-            "project_url": "https://gis4schools.readthedocs.io/en/latest/part4/4_2.html"
+            "project_url":"https://gis4schools.eu/#/home",
+            "activities_url": "https://gis4schools.readthedocs.io/en/latest/part4/4_2.html"
         }
     ],
     "teaching":[
@@ -350,6 +358,27 @@
                 },
                 {
                     "tool":"GitLab/Github CI/CD & actions",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "Software",
+            "list": [
+                {
+                    "tool":"MS Office",
+                    "url":"#"
+                },
+                {
+                    "tool":"Matlab",
+                    "url":"#"
+                },
+                {
+                    "tool":"STATA",
+                    "url":"#"
+                },
+                {
+                    "tool":"AutoDesk (Civil3D)",
                     "url":"#"
                 }
             ]

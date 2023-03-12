@@ -45,10 +45,10 @@ export default {
   },
   data() {
     return {
-      title: 'Activity',
-      info: 'Info',
+      title: 'Title',
+      info: {},
     }
-  }
+  },
 }
 </script>
 
@@ -73,39 +73,15 @@ import popUp from './popUp.vue'
     <template #heading>Experience</template>
     <template #list>
       <ul class="list-items" style="list-style-type:none;">
-        <li>
+        <li v-for="experience in contents.experience">
           <div class="list-item">
-            <div class="item-logo"><a href="https://www.progetti.interreg-italiasvizzera.eu/it/b/78/sistemainformativoperilmonitoraggiointegratodeilaghiinsubriciedeiloroe" class="link"><img class="project-logo" src="../assets/img/simile.png" alt="SIMILE"></a></div>
+            <div class="item-logo"><a :href="experience.project.url" class="link"><img class="project-logo" :src="experience.project_logo" alt="SIMILE"></a></div>
             <div class="item-title">
-              Research Fellow @ Politecnico di Milano [2021 - 2022]: SIMILE Project
+              <span class="item-main-info">{{ experience.position }}</span> @ {{ experience.company }} [{{ experience.start_date }} - {{ experience.end_date }}]: {{ experience.project }}
             </div>
             <popUp
-              :title="title"
-              :info="info"
-            ></popUp>
-          </div>
-        </li>
-        <li>
-          <div class="list-item">
-            <div class="item-logo"><a href="https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata" class="link"><img class="project-logo" src="../assets/img/gioconda.png" alt="GIOCOnDA"></a></div>
-            <div class="item-title">
-              Research Fellow @ Politecnico di Milano [2019 - 2021]: GIOCOnDA Project
-            </div>
-            <popUp
-              :title="title"
-              :info="info"
-            ></popUp>
-          </div>
-        </li>
-        <li>
-          <div class="list-item">
-            <div class="item-logo"><a href="https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata" class="link"><img class="project-logo" src="../assets/img/gioconda.png" alt="GIOCOnDA"></a></div>
-            <div class="item-title">
-              Internship @ Politecnico di Milano [Feb 2019 - Aug 2019]: GIOCOnDA Project
-            </div>
-            <popUp
-              :title="title"
-              :info="info"
+              :title="Activities"
+              :info=experience
             ></popUp>
           </div>
         </li>
@@ -121,30 +97,18 @@ import popUp from './popUp.vue'
     <template #heading>Projects Collaboration</template>
     <template #list>    
       <ul class="list-items" style="list-style-type:none;">
-        <li>
+        <li v-for="project in contents.projects">
           <div class="list-item">
-            <div class="item-logo"><a href="http://www.cidma.eu/" class="link"><img class="project-logo" src="../assets/img/cidma.png" alt="CIDMA"></a></div>
+            <div class="item-logo"><a :href="project.project_url" class="link"><img class="project-logo" :src="project.project_logo" :alt="project.project"></a></div>
             <div class="item-title">
-              CIDMA - Climate Change Induced Disaster Management in Africa
+              <span class="item-main-info">{{ project.project }}</span> - {{ project.full_name }}
             </div>
             <popUp
-              :title="title"
-              :info="info"
+              :title="Activities"
+              :info=project
             ></popUp>
           </div>
 
-        </li>
-        <li>
-          <div class="list-item">
-            <div class="item-logo"><a href="https://gis4schools.eu/#/home" class="link"><img class="project-logo" src="../assets/img/G4S.svg" alt="GIS4SCHOOLS"></a></div>
-            <div class="item-title">
-              GIS4Schools - GIS4SCHOOLS - Improving STEAM Education in Secondary Schools through the development and co-creation of new methodologies for teaching to and exploitation by pupils of GIS products related to climate impact on the environment
-            </div>
-            <popUp
-              :title="title"
-              :info="info"
-            ></popUp>
-          </div>
         </li>
       </ul>
     </template>
@@ -160,8 +124,7 @@ import popUp from './popUp.vue'
     <template #heading>Teaching Activities @ Politecnico di Milano</template>
     <template #list>
       <ul class="list-items">
-        <li>Teaching Assistant Fundamentals of GIS @ M.Sc. Civil Engineering for Risk Mitigation [Feb 2020 - Feb 2022]</li>
-        <li>Teaching Assistant Geographic Information Systems @ M.Sc. Geoinformatics [Oct 2020 - Feb 2022]</li>
+        <li v-for="teaching in contents.teaching"><span class="item-main-info">{{ teaching.position }}</span>- {{ teaching.course }} @ {{ teaching.program }} [{{ teaching.start_date }} - {{ teaching.end_date }}]</li>
       </ul>
     </template>
 
@@ -176,10 +139,9 @@ import popUp from './popUp.vue'
     <template #heading>Education</template>
     <template #list>
       <ul class="list-items">
-        <li>PhD Candidate in the Program of Infrastructure and Environmental Engineering @ Politecnico di Milano, Italy</li>
-        <li>M.Sc. Civil Engineering for Risk Mitigation @ Politecnico di Milano, Italy</li>
-        <li>B.Sc. Economics @ Universidad de los Andes, Colombia</li>
-        <li>B.Sc. Civil Engineering @ Universidad de los Andes, Colombia</li>
+        <li v-for="education in contents.education">
+          <span class="item-main-info">{{ education.study }}</span>@ {{ education.institution }}, {{ education.location }} [{{ education.start_date}} - {{ education.end_date }}]
+        </li>
       </ul>
     </template>    
     <br />
@@ -193,18 +155,12 @@ import popUp from './popUp.vue'
     <template #heading>Digital Skills</template>
     <template #list>
       <ul class="list-items">
-        <li>OS: Linux, Windows</li>
-        <li>Desktop/WebGIS GIS: ArcGIS, QGIS, ESA Sentinel Application Platform (SNAP), ENVI, Google Earth Engine</li>
-        <li>Programming Languages: Python, JavaScript, R, C++ (Basics), Java (Basics)</li>
-        <li>Geospatial Libraries (Python): geopandas, rasterio, xarray, snappy-api, gdal</li>
-        <li>ML (libraries): pytorch, scikit-learn, tensorflow</li>
-        <li>Databases: PostgreSQL/PostGIS, mongoDB</li>
-        <li>Web Mapping: OpenLayers, Leaflet</li>
-        <li>Map Server: GeoServer</li>
-        <li><p title="Content Management System" style="display:inline">CMS</p>: GeoNode, Drupal(Basics)</li>
-        <li>Web Frameworks: Django, Flask, VueJS</li>
-        <li>DevOps: git, docker, GitLab, Gitlab CI/CD, GitHub</li>
-        <li>Software: MS Office, Matlab, STATA, AutoDesk (Civil3D)</li>
+        <li v-for="skill in contents.skills">
+          {{ skill.category }}:     
+            <span v-for="tech in skill.list">
+              | {{ tech.tool }}
+            </span>
+        </li>
       </ul>
     </template>
   </WelcomeItem>
@@ -216,8 +172,9 @@ import popUp from './popUp.vue'
     <template #heading>Honours and Awards</template>
     <template #list>
       <ul class="list-items">
-        <li>ISPRS Best Young Author Award - Commision V @ XXIV ISPRS Congress 2022</li>
-        <li>Merit Based "Gold Scolarship" - M.Sc. Civil Engineering for Risk Mitigation @ Politecnico di Milano</li>
+        <li v-for="award in contents.awards">
+          <span class="item-main-info">{{ award.award }}</span> @ {{ award.awarded_by }}
+        </li>
       </ul>
     </template>
 
@@ -273,6 +230,10 @@ span.proceeding-title{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.item-main-info{
+  font-weight: bold;
 }
 </style>
 
