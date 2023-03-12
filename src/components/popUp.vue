@@ -59,6 +59,21 @@ export default{
   color: #FFF;
 }
 
+.modal-button{
+    background: transparent;
+    border-color: rgb(0, 150, 35);
+    color: #FFF;
+    font-weight: bold;
+    cursor:pointer;
+    border-radius: 4px;
+}
+
+.modal-button:hover{
+    background: rgb(0, 150, 35);
+    border-color: #FFF;
+    color: #FFF;
+}
+
 .modal-overlay {
   position: absolute;
   top:0;

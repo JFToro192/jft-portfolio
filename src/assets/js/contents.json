@@ -1,0 +1,368 @@
+{
+    "experience":[
+        {
+            "start_date": "Feb 2020",
+            "end_date": "Oct 2022",
+            "position": "Research Fellow",
+            "company": "Politecnico di Milano",
+            "project": "SIMILE project",
+            "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/sistemainformativoperilmonitoraggiointegratodeilaghiinsubriciedeiloroe",
+            "project_logo": "../assets/img/simile.png"
+        },
+        {
+            "start_date": "Ago 2019",
+            "end_date": "Jan 2020",
+            "position": "Research Fellow",
+            "company": "Politecnico di Milano",
+            "project": "GIOCOnDA project",
+            "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata",
+            "project_logo": "../assets/img/gioconda.png"
+        },
+        {
+            "start_date": "Ago 2019",
+            "end_date": "Jan 2020",
+            "position": "Internship",
+            "company": "Politecnico di Milano",
+            "project": "GIOCOnDA project",
+            "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata",
+            "project_logo": "../assets/img/gioconda.png"
+        }
+    ]
+    ,
+    "projects":[
+        {
+            "project": "CIDMA",
+            "full-name": "Climate Change Induced Disaster Management in Africa",
+            "activities": [
+                "Introductory material to Google Earth Engine (GEE)",
+                "Introductory material to the FAS and GloFAS (”European Flood Awareness System” and ”Global Flood Awareness System”, respectively)"
+            ],
+            "project_logo": "../assets/img/cidma.png",
+            "tools": ["GEE","QGIS"],
+            "project_url":"#"
+        },
+        {
+            "project": "GIS4Schools",
+            "full-name": "Climate Change Induced Disaster Management in Africa",
+            "activities": [
+                "Study case material using copernicus EMS and crisis maps production - Flood and Fire mapping",
+                "Sphinx-based documentation for the corresponding material"
+            ],
+            "project_logo": "../assets/img/cidma.png",
+            "tools": ["QGIS", "Python"],
+            "project_url": "https://gis4schools.readthedocs.io/en/latest/part4/4_2.html"
+        }
+    ],
+    "teaching":[
+        {
+            "start_date": "Feb 2020",
+            "end_date": "Feb 2022",
+            "position": "Teaching assistant of practical lessons",
+            "course": "Fundamentals of GIS",
+            "program": "M.Sc. Civil Engineering for risk mitigation",
+            "tools": ["ArcGIS"]
+        },
+        {
+            "start_date": "Oct 2020",
+            "end_date": "Feb 2022",
+            "position": "Teaching assistant of practical lessons",
+            "course": "Geographic Information Systems",
+            "program": "M.Sc. Geoinformatics Engineering",
+            "tools": ["HTML", "JS", "CSS", "OpenLayers", "PostgreSQL", "PostGIS", "GeoServer"],
+            "activities": ["Deliver practice sessions introducing the main components for the development of a webGIS. The technologies presented are comprehensive of the architecture of a webGIS, considering a web map server (GeoServer), web development (HTML, CSS, JS, Jquery) and a web mapping library (OpenLayers). Besides, the practices include an introductory session dedicated to PostgreSQL and PostGIS"]
+        },
+        {
+            "start_date": "Oct 2020",
+            "end_date": "Feb 2022",
+            "position": "Tutor of practical lessons",
+            "course": "Geographic Information Systems",
+            "program": "M.Sc. Geoinformatics Engineering",
+            "tools": ["ArcGIS", "QGIS"],
+            "activities":["Introduction to ArcGIS Software Products (ArcGIS Desktop Software and ArcGIS pro) through different exercises. Support the students of the course to carry out practice exercises on GIS software (ArcGIS)."]
+        },
+        {
+            "start_date": "Jun 5, 2020 - May 25, 2021 - May 30, 2022",
+            "end_date": "",
+            "position": "Seminar: Introduction to GeoNode",
+            "course": "Geospatial data processing to support seismic emergency management",
+            "program": "M.Sc. Civil Engineering for Risk Mitigation",
+            "tools": ["ArcGIS", "QGIS", "GeoNode"],
+            "activities":"Introductory exercise to become familiar with GeoNode Content Management System (CMS) for geospatial data user dashboard."
+        },
+        {
+            "start_date": "April 14, 2021 - April 20, 2022",
+            "end_date": "",
+            "position": "Seminar: GPS TIME SERIES ANALYSIS FOR STRAIN DETERMINATION APPLIED TO AMATRICE AREA",
+            "course": "Testing And Surveying for Earthquake Engineering",
+            "program": "M.Sc. Civil Engineering for Risk Mitigation",
+            "tools": ["ArcGIS", "Matlab"],
+            "activities": "Expose a practical use of surveying techniques in a pre-seismic context."
+        }
+    ],
+    "education":[
+        {
+            "start_date": "Nov 2019",
+            "end_date": "Current",
+            "study": "PhD candidate in Infrastructure and Environmental Engineering",
+            "institution": "Politecnico di Milano",
+            "location": "Italy"
+        },
+        {
+            "start_date": "Sep 2016",
+            "end_date": "Dec 2018",
+            "study": "M.Sc. Civil Engineering for Risk Mitigation",
+            "institution": "Politecnico di Milano",
+            "location": "Italy"
+        },
+        {
+            "start_date": "Jun 2012",
+            "end_date": "Apr 2016",
+            "study": "B.Sc. Economics",
+            "institution": "Universidad de los Andes",
+            "location": "Colombia"
+        },
+        {
+            "start_date": "Jan 2010",
+            "end_date": "Dec 2014",
+            "study": "B.Sc. Economics",
+            "institution": "Universidad de los Andes",
+            "location": "Colombia"
+        }
+    ],
+    "skills":[
+        {
+            "category": "OS",
+            "list": [
+                {
+                    "tool":"Linux",
+                    "url":"#"
+                },
+                {
+                    "tool":"Windows",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "Desktop/Web GIS",
+            "list": [
+                {
+                    "tool":"ArcGIS/ArcGIS pro",
+                    "url":"#"
+                },
+                {
+                    "tool":"QGIS",
+                    "url":"#"
+                },
+                {
+                    "tool":"ESA Sentinel Application Platform (SNAP)",
+                    "url":"#"
+                },
+                {
+                    "tool":"ENVI",
+                    "url":"#"
+                },
+                {
+                    "tool":"Google Earth Engine",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "Programming Languages",
+            "list": [
+                {
+                    "tool":"Python",
+                    "url":"#"
+                },
+                {
+                    "tool":"JavaScript",
+                    "url":"#"
+                },
+                {
+                    "tool":"R",
+                    "url":"#"
+                },
+                {
+                    "tool":"C++ (Basics)",
+                    "url":"#"
+                },
+                {
+                    "tool":"Java (Basics)",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "Geospatial libraries",
+            "list": [
+                {
+                    "tool":"geopandas",
+                    "url":"#"
+                },
+                {
+                    "tool":"rasterio",
+                    "url":"#"
+                },
+                {
+                    "tool":"xarray",
+                    "url":"#"
+                },
+                {
+                    "tool":"snappy-api",
+                    "url":"#"
+                },
+                {
+                    "tool":"gdal",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "ML (libraries)",
+            "list": [
+                {
+                    "tool":"pytorch",
+                    "url":"#"
+                },
+                {
+                    "tool":"scikit-learn",
+                    "url":"#"
+                },
+                {
+                    "tool":"tensorflow",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "Databases",
+            "list": [
+                {
+                    "tool":"PostgreSQL (PostGIS)",
+                    "url":"#"
+                },
+                {
+                    "tool":"mongoDB",
+                    "url":"#"
+                },
+                {
+                    "tool":"mySQL",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "Geospatial libraries",
+            "list": [
+                {
+                    "tool":"geopandas",
+                    "url":"#"
+                },
+                {
+                    "tool":"rasterio",
+                    "url":"#"
+                },
+                {
+                    "tool":"xarray",
+                    "url":"#"
+                },
+                {
+                    "tool":"snappy-api",
+                    "url":"#"
+                },
+                {
+                    "tool":"gdal",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "Web Mapping libraries",
+            "list": [
+                {
+                    "tool":"OpenLayers",
+                    "url":"#"
+                },
+                {
+                    "tool":"Leaflet",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "Map Server",
+            "list": [
+                {
+                    "tool":"GeoServer",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "Content Management System",
+            "list": [
+                {
+                    "tool":"GeoNode",
+                    "url":"#"
+                },
+                {
+                    "tool":"Drupal",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "Web frameworks",
+            "list": [
+                {
+                    "tool":"Django",
+                    "url":"#"
+                },
+                {
+                    "tool":"Flask",
+                    "url":"#"
+                },
+                {
+                    "tool":"VueJS",
+                    "url":"#"
+                }
+            ]
+        },
+        {
+            "category": "DevOps",
+            "list": [
+                {
+                    "tool":"git",
+                    "url":"#"
+                },
+                {
+                    "tool":"docker",
+                    "url":"#"
+                },
+                {
+                    "tool":"GitLab",
+                    "url":"#"
+                },
+                {
+                    "tool":"GitHub",
+                    "url":"#"
+                },
+                {
+                    "tool":"GitLab/Github CI/CD & actions",
+                    "url":"#"
+                }
+            ]
+        }
+    ],
+    "awards":[
+        {
+            "award":"ISPRS Best Young Author Award - Commision V ",
+            "awarded_by":" XXIV ISPRS Congress 2022"
+        },
+        {
+            "award":"Merit Based 'Gold Scolarship' - M.Sc. Civil Engineering for Risk Mitigation",
+            "awarded_by":" Politecnico di Milano"
+        }
+    ]
+}

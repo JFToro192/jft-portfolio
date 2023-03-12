@@ -1,4 +1,6 @@
 <script setup>
+import contents from './assets/js/contents.json'
+
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import axios from 'axios'
@@ -18,9 +20,10 @@ import 'ol/ol.css'
 export default {
   name: 'MapContainer',
   components: {},
-  props: {
-    map: null,
-  },
+  // props: {
+  //   map: null,
+  //   contents: null
+  // },
   data () {
     return {
       map : {},
@@ -29,7 +32,8 @@ export default {
         weather: {main:{temp:''},weather:[{main:'',description:''}]},
         icon: '',
         location: {},
-      })
+      }),
+      contents: contents,
     }
   },
   methods: {
@@ -87,6 +91,7 @@ export default {
         <span title="GitHub"><a href="https://github.com/JFToro192"><fa :icon="['fab','github-alt']" /></a></span>
         <span title="LinkedIn"><a href="https://linkedin.com/in/jftoro"><fa :icon="['fab','linkedin']" /></a></span>
       </div>
+
       <HelloWorld msg="Welcome!" />
       <br>
       <div class="projects">
@@ -112,7 +117,7 @@ export default {
   </header>
 
   <main>
-    <TheWelcome />
+    <TheWelcome :contents=contents></TheWelcome>
   </main>
 
   <footer>

@@ -35,6 +35,21 @@ const getPublication = () => {
 
 data.publication = getPublication()
 
+export default {
+  props:{
+    contents: {
+            type: Object,
+            required: true,
+            default: null
+    },
+  },
+  data() {
+    return {
+      title: 'Activity',
+      info: 'Info',
+    }
+  }
+}
 </script>
 
 <script setup>
@@ -45,6 +60,7 @@ import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import popUp from './popUp.vue'
+
 </script>
 
 
@@ -63,7 +79,10 @@ import popUp from './popUp.vue'
             <div class="item-title">
               Research Fellow @ Politecnico di Milano [2021 - 2022]: SIMILE Project
             </div>
-            <popUp></popUp>
+            <popUp
+              :title="title"
+              :info="info"
+            ></popUp>
           </div>
         </li>
         <li>
@@ -72,7 +91,10 @@ import popUp from './popUp.vue'
             <div class="item-title">
               Research Fellow @ Politecnico di Milano [2019 - 2021]: GIOCOnDA Project
             </div>
-            <popUp></popUp>
+            <popUp
+              :title="title"
+              :info="info"
+            ></popUp>
           </div>
         </li>
         <li>
@@ -81,7 +103,10 @@ import popUp from './popUp.vue'
             <div class="item-title">
               Internship @ Politecnico di Milano [Feb 2019 - Aug 2019]: GIOCOnDA Project
             </div>
-            <popUp></popUp>
+            <popUp
+              :title="title"
+              :info="info"
+            ></popUp>
           </div>
         </li>
       </ul>
@@ -102,7 +127,10 @@ import popUp from './popUp.vue'
             <div class="item-title">
               CIDMA - Climate Change Induced Disaster Management in Africa
             </div>
-            <popUp></popUp>
+            <popUp
+              :title="title"
+              :info="info"
+            ></popUp>
           </div>
 
         </li>
@@ -113,7 +141,8 @@ import popUp from './popUp.vue'
               GIS4Schools - GIS4SCHOOLS - Improving STEAM Education in Secondary Schools through the development and co-creation of new methodologies for teaching to and exploitation by pupils of GIS products related to climate impact on the environment
             </div>
             <popUp
-              :title="Activities"
+              :title="title"
+              :info="info"
             ></popUp>
           </div>
         </li>
@@ -225,7 +254,8 @@ span.proceeding-title{
 }
 
 .project-logo{
-  height: 50px;
+  /* height: 50px; */
+  width:120px
 }
 
 .list-item{
@@ -233,7 +263,7 @@ span.proceeding-title{
 }
 
 .item-title{
-  padding: 5px;
+  padding: 15px;
   width: 100%;
   text-align: justify;
 }
