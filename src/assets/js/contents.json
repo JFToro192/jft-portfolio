@@ -7,7 +7,7 @@
             "company": "Politecnico di Milano",
             "project": "SIMILE project",
             "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/sistemainformativoperilmonitoraggiointegratodeilaghiinsubriciedeiloroe",
-            "project_logo": "/jft-portfolio/src/assets/img/simile.png",
+            "project_logo": "https://www.gisgeolab.polimi.it/images/project-logos/simile.png",
             "activities_url":"",
             "activities":[]
         },
@@ -18,7 +18,7 @@
             "company": "Politecnico di Milano",
             "project": "GIOCOnDA project",
             "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata",
-            "project_logo": "/jft-portfolio/src/assets/img/gioconda.png",
+            "project_logo": "https://www.gisgeolab.polimi.it/images/project-logos/gioconda.png",
             "activities_url":"",
             "activities":[]
         },
@@ -29,7 +29,7 @@
             "company": "Politecnico di Milano",
             "project": "GIOCOnDA project",
             "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata",
-            "project_logo": "/jft-portfolio/src/assets/img/gioconda.png",
+            "project_logo": "https://www.gisgeolab.polimi.it/images/project-logos/gioconda.png",
             "activities_url":"",
             "activities":[]
         }
@@ -43,7 +43,7 @@
                 "Introductory material to Google Earth Engine (GEE)",
                 "Introductory material to the FAS and GloFAS (”European Flood Awareness System” and ”Global Flood Awareness System”, respectively)"
             ],
-            "project_logo": "/jft-portfolio/src/assets/img/cidma.png",
+            "project_logo": "https://www.gisgeolab.polimi.it/images/project-logos/cidma.png",
             "tools": ["GEE","QGIS"],
             "project_url":"https://gis4schools.eu/#/home",
             "activities_url":"#"
@@ -55,7 +55,7 @@
                 "Study case material using copernicus EMS and crisis maps production - Flood and Fire mapping",
                 "Sphinx-based documentation for the corresponding material"
             ],
-            "project_logo": "/jft-portfolio/src/assets/img/G4S.svg",
+            "project_logo": "https://www.gisgeolab.polimi.it/images/project-logos/G4S.svg",
             "tools": ["QGIS", "Python"],
             "project_url":"https://gis4schools.eu/#/home",
             "activities_url": "https://gis4schools.readthedocs.io/en/latest/part4/4_2.html"
