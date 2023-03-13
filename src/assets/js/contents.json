@@ -45,7 +45,7 @@
             ],
             "project_logo": "https://www.gisgeolab.polimi.it/images/project-logos/cidma.png",
             "tools": ["GEE","QGIS"],
-            "project_url":"https://gis4schools.eu/#/home",
+            "project_url":"https://cidma.eu/",
             "activities_url":"#"
         },
         {
@@ -392,6 +392,40 @@
         {
             "award":"Merit Based 'Gold Scolarship' - M.Sc. Civil Engineering for Risk Mitigation",
             "awarded_by":" Politecnico di Milano"
+        }
+    ],
+    "showcase": [
+        {
+            "project": "SIMILE - GeoNode",
+            "project_website": "https://www.geonode.eo.simile.polimi.it/",
+            "project_source": "",
+            "project_description": "Collaborative Data Sharing platform of WQP maps for project SIMILE",
+            "project_image": "https://github.com/JFToro192/jft-portfolio/blob/main/src/assets/img/geonode-simile.png?raw=true",
+            "project_technologies": ["Python","GeoNode","Django","Geoserver","PostgreSQL","PostGIS"]
+        },
+        {
+            "project": "SIMILE - WebGIS",
+            "project_website": "https://www.webgis.eo.simile.polimi.it/",
+            "project_source": "",
+            "project_description": "WebGIS for WQP maps for the synoptic monitoring of the WQP maps published in the project SIMILE's Collaborative Data Sharing platform",
+            "project_image": "https://github.com/JFToro192/jft-portfolio/blob/main/src/assets/img/webgis-simile.png?raw=true",
+            "project_technologies": ["JavaScript","NodeJS","Express.js","VueJS","OpenLayers","Sass"]
+        },
+        {
+            "project": "WQPs maps S3-OLCI JupyterLab",
+            "project_website": "",
+            "project_source": "https://hub.docker.com/repository/docker/jftoro/wqp_vm/general",
+            "project_description": "Containerized environment for processing the WQP optical satellite images (S3-OLCI and L8-TIRS)",
+            "project_image": "",
+            "project_technologies": ["Docker","Python","JupyterLab","ESA Sentinel Application Platform (SNAP)"]
+        },
+        {
+            "project": "ISG - Website",
+            "project_website": "",
+            "project_source": "",
+            "project_description": "Containerized Django+PostgreSQL application for the publication of Geoid models and web interface",
+            "project_image": "",
+            "project_technologies": ["Docker","Python","Django","PostgreSQL (PostGIS)"]
         }
     ]
 }

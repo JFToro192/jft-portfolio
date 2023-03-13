@@ -59,8 +59,8 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+import Showcase from './icons/IconShowcase.vue'
 import popUp from './popUp.vue'
-
 </script>
 
 
@@ -177,7 +177,6 @@ import popUp from './popUp.vue'
         </li>
       </ul>
     </template>
-
   </WelcomeItem>
 
   <WelcomeItem>
@@ -193,6 +192,32 @@ import popUp from './popUp.vue'
 
   </WelcomeItem>
 
+  <WelcomeItem>
+    <template #icon>
+      <div class="icon"><Showcase /></div>
+    </template>
+    <template #heading>Showcase</template>
+    <template #list>
+      <ul class="list-items">
+        <div class="wrap-project-web" v-for="showcase in contents.showcase">
+          <div class="project-website-image">
+            <img v-if="showcase.project_image != ''" :src="showcase.project_image" :alt="showcase.project" class="project-image">
+            <p v-else><fa :icon="['fas','person-digging']" /></p>
+          </div>
+          <div class="project-web-description">
+            <ul>
+              <h3>{{ showcase.project }}</h3>
+              <li>Description: {{ showcase.project_description }}</li>
+              <li v-if="showcase.project_website != ''"><a :href="showcase.website" class="project-web-link">[Website]</a></li>
+              <li v-if="showcase.project_source != ''"><a :href="showcase.project_source" class="project-web-source">[Source]</a></li>
+              <li>Technologies: <span v-for="tech in showcase.project_technologies"> {{ tech }} |</span></li>
+            </ul> 
+          </div>
+        </div>
+      </ul>
+    </template>
+
+  </WelcomeItem>
 </template>
 
 <style>
@@ -235,5 +260,31 @@ span.proceeding-title{
 .item-main-info{
   font-weight: bold;
 }
+
+.project-image{
+  height: 150px;
+}
+
+.wrap-project-web{
+  display: flex;
+}
+
+.wrap-project-web{
+  padding-top:10px;
+}
+
+.project-website-image{
+  display:flex;
+  min-width:30%;
+  align-content: center;
+  justify-content: center;
+}
+
+.project-website-image > p{
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+}
+
 </style>
 
