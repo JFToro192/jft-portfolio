@@ -198,23 +198,23 @@ import popUp from './popUp.vue'
     </template>
     <template #heading>Showcase</template>
     <template #list>
-      <ul class="list-items">
+      <div class="list-items">
         <div class="wrap-project-web" v-for="showcase in contents.showcase">
           <div class="project-website-image">
             <img v-if="showcase.project_image != ''" :src="showcase.project_image" :alt="showcase.project" class="project-image">
             <p v-else><fa :icon="['fas','person-digging']" /></p>
           </div>
           <div class="project-web-description">
-            <ul>
+            <div>
               <h3>{{ showcase.project }}</h3>
               <li>Description: {{ showcase.project_description }}</li>
-              <li v-if="showcase.project_website != ''"><a :href="showcase.website" class="project-web-link">[Website]</a></li>
+              <li v-if="showcase.project_website != ''"><a :href="showcase.project_website" class="project-web-link">[Website]</a></li>
               <li v-if="showcase.project_source != ''"><a :href="showcase.project_source" class="project-web-source">[Source]</a></li>
               <li>Technologies: <span v-for="tech in showcase.project_technologies"> {{ tech }} |</span></li>
-            </ul> 
+            </div> 
           </div>
         </div>
-      </ul>
+      </div>
     </template>
 
   </WelcomeItem>
@@ -265,17 +265,19 @@ span.proceeding-title{
   height: 150px;
 }
 
-.wrap-project-web{
-  display: flex;
-}
 
 .wrap-project-web{
+  display: flex;
   padding-top:10px;
+  width: auto;
+  margin: 5px;
+  background-color: rgba(118, 118, 118, 0.5);
+  border-radius: 10px;
 }
 
 .project-website-image{
   display:flex;
-  min-width:30%;
+  min-width:40%;
   align-content: center;
   justify-content: center;
 }

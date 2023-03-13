@@ -401,7 +401,7 @@
             "project_source": "",
             "project_description": "Collaborative Data Sharing platform of WQP maps for project SIMILE",
             "project_image": "https://github.com/JFToro192/jft-portfolio/blob/main/src/assets/img/geonode-simile.png?raw=true",
-            "project_technologies": ["Python","GeoNode","Django","Geoserver","PostgreSQL","PostGIS"]
+            "project_technologies": ["Docker","Python","GeoNode","Django","Geoserver","PostgreSQL","PostGIS"]
         },
         {
             "project": "SIMILE - WebGIS",
@@ -409,7 +409,7 @@
             "project_source": "",
             "project_description": "WebGIS for WQP maps for the synoptic monitoring of the WQP maps published in the project SIMILE's Collaborative Data Sharing platform",
             "project_image": "https://github.com/JFToro192/jft-portfolio/blob/main/src/assets/img/webgis-simile.png?raw=true",
-            "project_technologies": ["JavaScript","NodeJS","Express.js","VueJS","OpenLayers","Sass"]
+            "project_technologies": ["Docker","JavaScript","NodeJS","Express.js","VueJS","OpenLayers","Sass"]
         },
         {
             "project": "WQPs maps S3-OLCI JupyterLab",
