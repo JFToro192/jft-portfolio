@@ -75,14 +75,14 @@ import popUp from './popUp.vue'
       <ul class="list-items" style="list-style-type:none;">
         <li v-for="experience in contents.experience">
           <div class="list-item">
-            <div class="item-logo"><a :href="experience.project.url" class="link"><img class="project-logo" :src="experience.project_logo" alt="SIMILE"></a></div>
-            <div class="item-title">
-              <span class="item-main-info">{{ experience.position }}</span> @ {{ experience.company }} [{{ experience.start_date }} - {{ experience.end_date }}]: {{ experience.project }}
-            </div>
             <popUp
               :title="Activities"
               :info=experience
             ></popUp>
+            <div class="item-title">
+              <span class="item-main-info">{{ experience.position }}</span> @ {{ experience.company }} [{{ experience.start_date }} - {{ experience.end_date }}]: {{ experience.project }}
+            </div>
+            <div class="item-logo"><a :href="experience.project_url" class="link"><img class="project-logo" :src="experience.project_logo" alt="SIMILE"></a></div>
           </div>
         </li>
       </ul>
@@ -99,14 +99,14 @@ import popUp from './popUp.vue'
       <ul class="list-items" style="list-style-type:none;">
         <li v-for="project in contents.projects">
           <div class="list-item">
-            <div class="item-logo"><a :href="project.project_url" class="link"><img class="project-logo" :src="project.project_logo" :alt="project.project"></a></div>
-            <div class="item-title">
-              <span class="item-main-info">{{ project.project }}</span> - {{ project.full_name }}
-            </div>
             <popUp
               :title="Activities"
               :info=project
             ></popUp>
+            <div class="item-title">
+              <span class="item-main-info">{{ project.project }}</span> - {{ project.full_name }}
+            </div>
+            <div class="item-logo"><a :href="project.project_url" class="link"><img class="project-logo" :src="project.project_logo" :alt="project.project"></a></div>
           </div>
 
         </li>
@@ -124,7 +124,10 @@ import popUp from './popUp.vue'
     <template #heading>Teaching Activities @ Politecnico di Milano</template>
     <template #list>
       <ul class="list-items">
-        <li v-for="teaching in contents.teaching"><span class="item-main-info">{{ teaching.position }}</span>- {{ teaching.course }} @ {{ teaching.program }} [{{ teaching.start_date }} - {{ teaching.end_date }}]</li>
+        <li v-for="teaching in contents.teaching"><span class="item-main-info">{{ teaching.position }}</span>- {{ teaching.course }} @ {{ teaching.program }}
+           <span v-if="teaching.end_date != ''">[{{ teaching.start_date }} - {{ teaching.end_date }}]</span>
+           <span v-else>[{{ teaching.start_date }}]</span>
+          </li>
       </ul>
     </template>
 
@@ -158,7 +161,7 @@ import popUp from './popUp.vue'
         <li v-for="skill in contents.skills">
           {{ skill.category }}:     
             <span v-for="tech in skill.list">
-              | {{ tech.tool }}
+              {{ tech.tool }} |
             </span>
         </li>
       </ul>
@@ -200,18 +203,21 @@ import popUp from './popUp.vue'
     <template #list>
       <div class="list-items">
         <div class="wrap-project-web" v-for="showcase in contents.showcase">
+          <div class="project-web-description">
+            <div>
+              <h3 class="project-web-title">{{ showcase.project }}</h3>
+              <hr>
+              <div class="project-web-description-items">
+                <li>Description: {{ showcase.project_description }}</li>
+                <li v-if="showcase.project_website != ''"><a :href="showcase.project_website" class="project-web-link">[Website]</a></li>
+                <li v-if="showcase.project_source != ''"><a :href="showcase.project_source" class="project-web-source">[Source]</a></li>
+                <li>Technologies: <span v-for="tech in showcase.project_technologies"> {{ tech }} | </span></li>
+              </div>
+            </div> 
+          </div>
           <div class="project-website-image">
             <img v-if="showcase.project_image != ''" :src="showcase.project_image" :alt="showcase.project" class="project-image">
             <p v-else><fa :icon="['fas','person-digging']" /></p>
-          </div>
-          <div class="project-web-description">
-            <div>
-              <h3>{{ showcase.project }}</h3>
-              <li>Description: {{ showcase.project_description }}</li>
-              <li v-if="showcase.project_website != ''"><a :href="showcase.project_website" class="project-web-link">[Website]</a></li>
-              <li v-if="showcase.project_source != ''"><a :href="showcase.project_source" class="project-web-source">[Source]</a></li>
-              <li>Technologies: <span v-for="tech in showcase.project_technologies"> {{ tech }} |</span></li>
-            </div> 
           </div>
         </div>
       </div>
@@ -236,7 +242,6 @@ span.proceeding-title{
 }
 
 .project-logo{
-  /* height: 50px; */
   width:120px
 }
 
@@ -261,23 +266,19 @@ span.proceeding-title{
   font-weight: bold;
 }
 
-.project-image{
-  height: 150px;
-}
-
-
 .wrap-project-web{
   display: flex;
-  padding-top:10px;
-  width: auto;
-  margin: 5px;
-  background-color: rgba(118, 118, 118, 0.5);
+  padding:10px;
+  margin: 10px;
+  background-color: var(--color-border);
   border-radius: 10px;
 }
 
 .project-website-image{
   display:flex;
-  min-width:40%;
+  width:30%;
+  height: 175px;
+  object-fit: contain;
   align-content: center;
   justify-content: center;
 }
@@ -288,5 +289,16 @@ span.proceeding-title{
   align-items: center;
 }
 
+.project-web-title{
+  font-weight: bold;
+}
+
+.project-web-description{
+  width: 70%;
+}
+
+.project-web-description-items{
+  padding: 5px 0;
+}
 </style>
 

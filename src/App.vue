@@ -109,7 +109,9 @@ export default {
           <p>Temperature: {{ data.weather.main.temp }}&deg;</p>
           <p>Weather: {{ data.weather.weather[0].main }}</p>
           <p>Description: {{ data.weather.weather[0].description }}</p>
-          <img v-bind:src=data.icon alt="">
+          <div class="wrapper-weather-image">
+            <img v-bind:src=data.icon alt="">
+          </div>
         </div>        
       </div>
 
@@ -119,9 +121,7 @@ export default {
   <main>
     <TheWelcome :contents=contents></TheWelcome>
   </main>
-
   <footer>
-    <hr>
     <div>
       <span title="GitHub Actions"><img src="./assets/GitHub_actions.png" alt="GH_actions" style="height:20px;"></span>
       <span title="VueJS"><img src="./assets/vue.svg" alt="VueJS" style="height:20px;"></span>
@@ -134,8 +134,10 @@ export default {
 
 <style scoped>
 @import "ol/ol.css";
+
 header {
   line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .logo {
@@ -175,7 +177,28 @@ a:hover{
   color:blueviolet;
 }
 
+input{
+  border-radius: 5px;
+}
+
+button{
+  margin:5px 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover{
+  background: var(--vt-button-color);
+  color:#FFF;
+}
+
 footer{
+  width:100%;
   padding:5px;
   border-radius: 4px;
   background-color: white;
@@ -198,5 +221,14 @@ footer{
 
 .weather {
   margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background: var(--color-border);
+}
+
+.wrapper-weather-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

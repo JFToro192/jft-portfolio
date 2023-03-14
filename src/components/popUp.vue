@@ -43,7 +43,7 @@ export default{
     </transition>
 </template>
 
-<style scoped>
+<style>
 .item-info{
   display: flex;
   align-items: center;
@@ -51,29 +51,29 @@ export default{
 
 .btn-item-info{
   background: transparent;
-  border-color: rgb(0, 150, 35);
-  color: rgb(0, 150, 35);
+  border-color: var(--vt-button-color);
+  color: var(--vt-button-color);
   height: 20px;
   border-radius: 50%;
 }
 
 .btn-item-info:hover{
   cursor:pointer;
-  background: rgb(0, 150, 35);
+  background: var(--vt-button-color);
   color: #FFF;
 }
 
 .modal-button{
     background: transparent;
-    border-color: rgb(0, 150, 35);
-    color: #FFF;
+    border-color: var(--vt-button-color);
+    color: var(--color-button-text);
     font-weight: bold;
     cursor:pointer;
     border-radius: 4px;
 }
 
 .modal-button:hover{
-    background: rgb(0, 150, 35);
+    background: var(--vt-button-color);
     border-color: #FFF;
     color: #FFF;
 }
@@ -86,23 +86,20 @@ export default{
   bottom:0;
   border-radius: 10px;
   z-index:1;
-  background-color: rgb(0, 150, 35);
+  background-color: var(--vt-button-color);
   opacity: 0.1;
 }
 
 .modal{
     position: absolute;
-    right:20px;
+    left:20px;
     padding: 10px;
-    transform: translate(-25%, -15%);
+    transform: translate(1em, 0);
     z-index: 2;
 
-    width: auto;
-    max-width: 300px;
-    background-color: grey;
+    max-width: 60%;
+    background-color: var(--color-bg-popup);
     border-radius:12px;
-
-    color:#FFF;
 }
 
 .fade-enter-active,

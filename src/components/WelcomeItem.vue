@@ -131,33 +131,40 @@ button{
   font-weight: bold;
   margin-right: 10px;
   background: transparent;
-  color: rgb(0, 150, 35);
+  color: var(--vt-button-color);
   border-radius: 50%;
   /* transition: 0.5s ease-in; */
-  border-color: rgb(0, 150, 35);
+  border-color: var(--vt-button-color);
 }
 
 button:hover{
   cursor:pointer;
-  background: rgb(0, 150, 35);
+  background: var(--vt-button-color);
   color: #FFF;
 }
 
 button.active{
-  background: rgb(0, 150, 35);
+  background: var(--vt-button-color);
   color: #FFF;
 }
 
+@keyframes item-animation{
+  from {opacity: 0;transform: translateX(50vw);}
+  to {opacity: 1;transform: translateX(0);}
+}
 .details>.list{
   visibility: hidden;
   height: 0;
   opacity: 0;
+  animation-duration: 1s;
 }
 
 .details.active>.list{
   visibility: visible;
   height: auto;
   opacity:1;
+  animation-name: item-animation;
+  animation-duration: 1s;
 }
 
 .details.active>h3{
