@@ -1,6 +1,5 @@
 <script created>
 import { reactive } from 'vue'
-import axios from 'axios'
 import api from 'zotero-api-client';
 
 const USER_ID = import.meta.env.VITE_USER_ID;

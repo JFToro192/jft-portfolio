@@ -1,6 +1,21 @@
 {
     "experience":[
         {
+            "start_date": "Jun 2023",
+            "end_date": "Current",
+            "position": "GIS Developer",
+            "company": "Terraria S.r.l",
+            "project": "GIS group",
+            "project_url": "",
+            "project_logo": "",
+            "activities_url":"",
+            "activities":[
+                "Integration of ArcGIS technologies such as ArcGIS Enterprise, ArcGIS Server, and ArcGIS Pro to access and manage geospatial data and services.",
+                "Proficient in implementing geoprocessing tools and services within web applications, enabling data access and visualization",
+                "Demonstrated the ability to customize user interfaces, workflows, and the overall appearance of web applications to meet project requirements"
+            ]
+        },
+        {
             "start_date": "Feb 2020",
             "end_date": "Oct 2022",
             "position": "Research Fellow",
@@ -9,7 +24,10 @@
             "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/sistemainformativoperilmonitoraggiointegratodeilaghiinsubriciedeiloroe",
             "project_logo": "https://www.gisgeolab.polimi.it/images/project-logos/simile.png",
             "activities_url":"",
-            "activities":[]
+            "activities":[
+                "Design and implementation of the WebGIS into the platform. Additionally, it involved adapting a GeoNode platform to the project’s needs. WebGIS technologies: WMS, Vue.js, Express.js, Node.js, Openlayers. Platform technologies: Docker, GeoNode (Django, GeoServer, PostgreSQL)",
+                "Implement a semi-automated WQP map production procedure using optical satellite images (Sentinel 3-OLCI and Landsat 8) within a docker composition. Programming skills: Python (SNAPPYAPI, GeFolki, Rasterio, Scikit-learn)"
+            ]
         },
         {
             "start_date": "Ago 2019",
@@ -20,7 +38,10 @@
             "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata",
             "project_logo": "https://www.gisgeolab.polimi.it/images/project-logos/gioconda.png",
             "activities_url":"",
-            "activities":[]
+            "activities":[
+                "Review different open data sets using Python, focusing on the formats, the data structures and the presence of spatial information in the context of GIOCOnDA Project",
+                "Contribute to adapting the dataset’s metadata to the Cultural-ON ontology. In particular, on the integration of geospatial attributes for describing the datasets"
+            ]
         },
         {
             "start_date": "Ago 2019",
@@ -31,7 +52,10 @@
             "project_url": "https://www.progetti.interreg-italiasvizzera.eu/it/b/78/gestioneintegrataeolisticadelciclodivitadegliopendata",
             "project_logo": "https://www.gisgeolab.polimi.it/images/project-logos/gioconda.png",
             "activities_url":"",
-            "activities":[]
+            "activities":[
+                "Review and analysis of the metadata of datasets of interest through the APIs from each portal using Python (CKAN and Socrata).",
+                "Assessment of the data structures and practices for publication by each Open Data catalogue. The review focused on the Data Catalogue Vocabulary Application (DCAT-AP) profile for the metadata."
+            ]
         }
     ]
     ,
@@ -303,6 +327,10 @@
             "list": [
                 {
                     "tool":"GeoServer",
+                    "url":"#"
+                }
+                {
+                    "tool":"ArcGIS server",
                     "url":"#"
                 }
             ]
