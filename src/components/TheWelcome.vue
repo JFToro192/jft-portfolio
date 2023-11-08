@@ -105,7 +105,7 @@ import popUp from './popUp.vue'
             <div class="item-title">
               <span class="item-main-info">{{ project.project }}</span> - {{ project.full_name }}
             </div>
-            <div class="item-logo"><a :href="project.project_url" class="link"><img class="project-logo" :src="project.project_logo" :alt="project.project"></a></div>
+            <div class="item-logo"><a :href="project.project_url" class="link"><img class="project-logo" :src="project.project_logo"></a></div>
           </div>
 
         </li>
