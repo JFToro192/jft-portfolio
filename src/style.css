@@ -68,6 +68,10 @@ button:focus-visible {
   padding: 2em;
 }
 
+.modal>ul{
+  color: black;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -85,5 +89,8 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+  .modal>ul{
+    color: white;
   }
 }
