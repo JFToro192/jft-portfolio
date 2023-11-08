@@ -81,7 +81,7 @@ import popUp from './popUp.vue'
             <div class="item-title">
               <span class="item-main-info">{{ experience.position }}</span> @ {{ experience.company }} [{{ experience.start_date }} - {{ experience.end_date }}]: {{ experience.project }}
             </div>
-            <div class="item-logo"><a :href="experience.project_url" class="link"><img class="project-logo" :src="experience.project_logo" alt="SIMILE"></a></div>
+            <div class="item-logo"><a :href="experience.project_url" class="link"><img class="project-logo" :src="experience.project_logo"></a></div>
           </div>
         </li>
       </ul>
@@ -105,7 +105,7 @@ import popUp from './popUp.vue'
             <div class="item-title">
               <span class="item-main-info">{{ project.project }}</span> - {{ project.full_name }}
             </div>
-            <div class="item-logo"><a :href="project.project_url" class="link"><img class="project-logo" :src="project.project_logo"></a></div>
+            <div class="item-logo"><a :href="project.project_url" class="link"><img class="project-logo" :src="project.project_logo" :alt="project.project"></a></div>
           </div>
 
         </li>
