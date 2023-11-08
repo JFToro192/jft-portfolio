@@ -86,7 +86,7 @@ export default {
       <div class="contact-me">
         <h2>Juan Fernando Toro Herrera</h2>
         <h3><i>Ph.D. in Environmental and Infrastructure Engineering @ Politecnico di Milano</i></h3>
-        <h3><i>M.Sc. Civil Engineering for Risk Mitigation @ Politecnico di Milano</i></h3>
+        <!-- <h3><i>M.Sc. Civil Engineering for Risk Mitigation @ Politecnico di Milano</i></h3> -->
         <span title="Email"><a href="mailto:juanfer_toro192@hotmail.com"><fa :icon="['fas','envelope']" /></a></span>
         <span title="GitHub"><a href="https://github.com/JFToro192"><fa :icon="['fab','github-alt']" /></a></span>
         <span title="LinkedIn"><a href="https://linkedin.com/in/jftoro"><fa :icon="['fab','linkedin']" /></a></span>
