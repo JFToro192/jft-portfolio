@@ -102,6 +102,10 @@ export default{
     border-radius:12px;
 }
 
+.modal>ul{
+    color: var(--color-button-text);
+}
+
 .fade-enter-active,
 .fade-leave-active{
     transition: opacity 0.5s;
