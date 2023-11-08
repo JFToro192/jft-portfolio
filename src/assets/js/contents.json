@@ -328,7 +328,7 @@
                 {
                     "tool":"GeoServer",
                     "url":"#"
-                }
+                },
                 {
                     "tool":"ArcGIS server",
                     "url":"#"
