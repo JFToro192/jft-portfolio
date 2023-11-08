@@ -69,7 +69,7 @@ button:focus-visible {
 }
 
 .modal>ul{
-  color: black;
+  color: black!important;
 }
 
 #app {
@@ -91,6 +91,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
   .modal>ul{
-    color: white;
+    color: white!important;
   }
 }
